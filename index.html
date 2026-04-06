@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>StocknTrack System</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
+            background: #0f0f0f;
+            color: white;
         }
 
-        /* LEFT SIDEBAR */
+        /* SIDEBAR */
         nav {
-            width: 200px;
+            width: 220px;
             height: 100vh;
             background: #111;
             position: fixed;
             left: 0;
             top: 0;
             padding-top: 20px;
+            border-right: 2px solid orange;
+        }
+
+        nav h2 {
+            text-align: center;
+            color: orange;
         }
 
         nav ul {
@@ -44,20 +52,28 @@
             color: black;
         }
 
-        /* MAIN CONTENT */
+        /* CONTENT */
         .content {
-            margin-left: 200px;
-            padding: 20px;
+            margin-left: 220px;
+            padding: 30px;
             width: 100%;
         }
 
         section {
-            height: 100vh;
-            padding-top: 50px;
+            min-height: 100vh;
+            padding-top: 40px;
         }
 
         h1, h2 {
             color: orange;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid orange;
+            border-radius: 10px;
         }
 
         button {
@@ -65,18 +81,24 @@
             background: orange;
             border: none;
             cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #ff8800;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR NAV -->
+    <!-- SIDEBAR -->
     <nav>
+        <h2>StocknTrack</h2>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#home">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#system">System</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -84,32 +106,92 @@
     <!-- MAIN CONTENT -->
     <div class="content">
 
+        <!-- OVERVIEW -->
         <section id="home">
-            <h1>Welcome to My Website</h1>
-            <p>This is my homepage.</p>
-            <button onclick="sayHello()">Click Me</button>
+            <h1>StocknTrack Inventory System</h1>
+            <p>
+                StocknTrack is a smart inventory management system designed to monitor,
+                organize, and track stocks efficiently in real-time.
+            </p>
+
+            <div class="card">
+                <h2>Purpose</h2>
+                <p>
+                    The system helps businesses reduce errors, prevent stock shortages,
+                    and maintain accurate inventory records.
+                </p>
+            </div>
+
+            <button onclick="showMessage()">Learn More</button>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am learning web development using GitHub.</p>
+        <!-- FEATURES -->
+        <section id="features">
+            <h2>Key Features</h2>
+
+            <div class="card">
+                📦 Real-time stock monitoring
+            </div>
+
+            <div class="card">
+                📊 Inventory tracking and reporting
+            </div>
+
+            <div class="card">
+                🔔 Low-stock alerts
+            </div>
+
+            <div class="card">
+                🧾 Easy product management
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>My future projects will appear here.</p>
+        <!-- SYSTEM -->
+        <section id="system">
+            <h2>How the System Works</h2>
+
+            <div class="card">
+                <p>
+                    1. User inputs product data into the system
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    2. System stores and tracks inventory levels
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    3. Alerts are triggered when stock is low
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    4. Reports are generated for monitoring
+                </p>
+            </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: your@email.com</p>
+
+            <div class="card">
+                <p>
+                    Developed for academic and project demonstration purposes.
+                </p>
+            </div>
         </section>
 
     </div>
 
     <script>
-        function sayHello() {
-            alert("Hello! Welcome to my website!");
+        function showMessage() {
+            alert("StocknTrack helps you manage inventory efficiently!");
         }
     </script>
 
