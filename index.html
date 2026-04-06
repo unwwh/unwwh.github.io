@@ -1,199 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StocknTrack System</title>
-
+    <title>StocknTrack - Overview</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            background: #0f0f0f;
-            color: white;
-        }
+        body { margin:0; font-family:Arial; display:flex; background:#0f0f0f; color:white; }
+        nav { width:220px; height:100vh; background:#111; position:fixed; left:0; top:0; padding-top:20px; border-right:2px solid orange; }
+        nav h2 { text-align:center; color:orange; }
+        nav ul { list-style:none; padding:0; }
+        nav ul li { margin:20px 0; text-align:center; }
+        nav ul li a { color:white; text-decoration:none; font-weight:bold; display:block; padding:10px; }
+        nav ul li a:hover { background:orange; color:black; }
 
-        /* SIDEBAR */
-        nav {
-            width: 220px;
-            height: 100vh;
-            background: #111;
-            position: fixed;
-            left: 0;
-            top: 0;
-            padding-top: 20px;
-            border-right: 2px solid orange;
-        }
+        .content { margin-left:220px; padding:30px; width:100%; }
+        h1, h2 { color:orange; }
 
-        nav h2 {
-            text-align: center;
-            color: orange;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-        }
-
-        nav ul li a:hover {
-            background: orange;
-            color: black;
-        }
-
-        /* CONTENT */
-        .content {
-            margin-left: 220px;
-            padding: 30px;
-            width: 100%;
-        }
-
-        section {
-            min-height: 100vh;
-            padding-top: 40px;
-        }
-
-        h1, h2 {
-            color: orange;
-        }
-
-        .card {
-            background: #1a1a1a;
-            padding: 20px;
-            margin: 15px 0;
-            border-left: 5px solid orange;
-            border-radius: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: orange;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background: #ff8800;
-        }
+        .card { background:#1a1a1a; padding:20px; margin:15px 0; border-left:5px solid orange; border-radius:10px; }
     </style>
 </head>
-
 <body>
 
-    <!-- SIDEBAR -->
-    <nav>
-        <h2>StocknTrack</h2>
-        <ul>
-            <li><a href="#home">Overview</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#system">System</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <h2>StocknTrack</h2>
+    <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="system.html">System</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
+<div class="content">
+    <h1>StocknTrack Inventory System</h1>
+    <p>A smart system designed to track and manage inventory efficiently.</p>
 
-        <!-- OVERVIEW -->
-        <section id="home">
-            <h1>StocknTrack Inventory System</h1>
-            <p>
-                StocknTrack is a smart inventory management system designed to monitor,
-                organize, and track stocks efficiently in real-time.
-            </p>
-
-            <div class="card">
-                <h2>Purpose</h2>
-                <p>
-                    The system helps businesses reduce errors, prevent stock shortages,
-                    and maintain accurate inventory records.
-                </p>
-            </div>
-
-            <button onclick="showMessage()">Learn More</button>
-        </section>
-
-        <!-- FEATURES -->
-        <section id="features">
-            <h2>Key Features</h2>
-
-            <div class="card">
-                📦 Real-time stock monitoring
-            </div>
-
-            <div class="card">
-                📊 Inventory tracking and reporting
-            </div>
-
-            <div class="card">
-                🔔 Low-stock alerts
-            </div>
-
-            <div class="card">
-                🧾 Easy product management
-            </div>
-        </section>
-
-        <!-- SYSTEM -->
-        <section id="system">
-            <h2>How the System Works</h2>
-
-            <div class="card">
-                <p>
-                    1. User inputs product data into the system
-                </p>
-            </div>
-
-            <div class="card">
-                <p>
-                    2. System stores and tracks inventory levels
-                </p>
-            </div>
-
-            <div class="card">
-                <p>
-                    3. Alerts are triggered when stock is low
-                </p>
-            </div>
-
-            <div class="card">
-                <p>
-                    4. Reports are generated for monitoring
-                </p>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your@email.com</p>
-
-            <div class="card">
-                <p>
-                    Developed for academic and project demonstration purposes.
-                </p>
-            </div>
-        </section>
-
+    <div class="card">
+        <h2>Purpose</h2>
+        <p>Helps reduce errors, avoid shortages, and improve stock monitoring.</p>
     </div>
-
-    <script>
-        function showMessage() {
-            alert("StocknTrack helps you manage inventory efficiently!");
-        }
-    </script>
+</div>
 
 </body>
 </html>
